@@ -278,3 +278,18 @@ To check your answer, highlight --> 16728
 
 
 */
+
+// Jan 18, 2022 cf arrays, delete elements in arr1 that are dupes of arr2
+
+const findDiff = (arr1, arr2) => {
+  let arr3 = []
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] !== arr2[j]) {
+        arr3.push(arr1[i]);
+      }
+    }
+  }
+    return arr3
+}
+console.log(findDiff([1,2,2,2,3],[2]))
